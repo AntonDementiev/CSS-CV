@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* импортируем кастомный шрифт */
+
+/* обрщаемся ко всем и делаем отступы 0 */
+/* * { 
+  padding: 0;
+  margin: 0;
+}  */
+
+/* редактирует всё "тело" сайта */
+body {
+  background-color: #90c562;
+  color: #0f141e;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+
+  /* font: norml 16 px "Roboto", sans-serif; - свойство font позволяет нам не писать много разных свойств, а сразу написать в одно свойство всё, что относится к шрифту*/
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* обращемся к ссылкам и говорим, что при наведении мышкой ссылка будет подчёркиваться */
+a:hover {
+  text-decoration: underline;
+}
+
+/* обращемся к ссылкам и говорим, что при нажатии мышкой на ссылку она будет гореть синем цветом */
+a:active {
+  color: blue;
+}
+
+/* обращемся к ссылкам и говорим, что все ссылки ,по которым мы уже переходили подсвечивать серым цветом*/
+a:visited {
+  color: grey;
+}
+
+/* редактирует тег <img> с классом "corgi" */
+.corgi {
+  width: 150px;
+  border-radius: 28px; /*позволят нам скруглить края фигуры/картинки */
+  box-shadow: -20px 19px 0px; /*создаёт тень*/
+}
+
+.info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* адаптирует сайт под разные устройства */
+@media (max-width: 700px) {
+  .info {
+    text-align: center;
+    display: block;
+  }
+}
+
+.info-text {
+  margin-left: 30px;
+}
+
+.info-text h4 {
+  margin-bottom: 10px;
+}
+
+/* редактирует все теги <p> в теге с классом "info" */
+.info p {
+  color: #b860c3;
+  margin: 0;
+  font-style: italic;
+  /* font-weight: bold; */
+  text-decoration: underline;
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  word-spacing: 7px;
+}
+
+/* редактирует тег <div> с классом "container" */
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+/* тег <div> с классом "social" */
+/* Box model */
+/* .social {
+  background: #00d8fb;
+  padding: 13px 20px 10px 25px;
+  padding-top: 13px;
+  padding-right: 20px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  border: 3px solid #b860c3;
+  margin: 25px;
+  border-top-width: 7px;
+  border-right-width: 7px;
+  border-left-color: green;
+} */
+
+/* box-sizing позволяет выстроить в один ряд объекты , а border-box учьтёт их границы */
+
+/* .box-model > div {
+  float: left;
+  background: white;
+  height: 200px;
+  border: 4px solid blue;
+  width: 25%;
+  box-sizing: border-box;
+} */
+
+.bg-yellow {
+  background: #fff9dc;
+}
+
+.bg-green {
+  background: #e5ffe7;
+}
+
+.bg-red {
+  background: #ffe5e5;
+}
+
+.bg-blue {
+  background: #def7fe;
+}
+
+.card {
+  padding: 15px 20px;
+  /* background: #00dbfb; */
+  box-shadow: -20px 20px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+.contact {
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  box-shadow: -20px 20px;
+  border-radius: 30px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.list {
+  padding: 0 20px;
+}
+
+.list li {
+  color: #00dbfb;
+  margin-bottom: 7px;
+  /* border-bottom: 1px solid grey; */
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding-bottom: 10px;
+}
+
+/* nth-child - псевдоселектор, который позволяет нам выбрать конкретный порядковый элемент и точечно их стилизовать*/
+.table td:nth-child(2),
+.table td:nth-child(3) {
+  color: #b860c3;
+}
+
+/* каждая нечётная точка выделется красным цветом  */
+/* .table tr:nth-child(even) {
+  background: red;
+} */
+
+.link-list {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.link-list li {
+  margin-bottom: 7px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* display: block; превращает строчный элемент в блочный  */
+
+.form-group label {
+  display: block;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  margin-left: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent; /* позволяет сделать фон объекта прозрачным */
+  border-bottom: 1px solid #ccc;
+  color: #000;
+  padding: 7px 0 10px;
+  outline: none;
+  font-family: inherit;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.row > .form-group {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.row > .form-group:last-child {
+  margin-right: 0;
+}
+
+.btn {
+  background: #ccc;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  padding: 7px 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* opacity - при наведении на кнопку немного меняется её стиль */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Position */
+
+.position {
+  position: relative;
+  /* border: 4px solid black; */
+  margin-top: 80px;
+  padding: 20px;
+  height: 300px;
+}
+
+.box {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: lightseagreen;
+  border-radius: 30%;
+  box-shadow: 0 0 20px;
+}
